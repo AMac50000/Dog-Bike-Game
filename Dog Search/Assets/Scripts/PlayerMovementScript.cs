@@ -23,16 +23,18 @@ public class PlayerMovementScript : MonoBehaviour
 
     }
 
+    private void FixedUpdate()
+    {
+        Move();
+    }
     // Update is called once per frame
     void Update()
     {
         ConstrainRotation();
         CheckInput();
-        Move();
         Debug.DrawRay(new Vector3(rayOrigin1.position.x, rayOrigin1.position.y), Vector3.down * jumpDistance, Color.red);
         Debug.DrawRay(new Vector3(rayOrigin2.position.x, rayOrigin2.position.y), Vector3.down * jumpDistance, Color.red);
         Debug.DrawRay(new Vector3(rayOrigin3.position.x, rayOrigin3.position.y), Vector3.down * jumpDistance, Color.red);
-
     }
 
     void CheckInput()
