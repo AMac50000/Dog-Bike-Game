@@ -7,6 +7,9 @@ TagManager:
   - Heart
   - Enemy
   - Ground
+  - Wheel
+  - Bike
+  - Boy
   layers:
   - Default
   - TransparentFX
