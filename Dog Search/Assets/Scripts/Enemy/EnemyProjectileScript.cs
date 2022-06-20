@@ -5,32 +5,35 @@ using UnityEngine;
 public class EnemyProjectileScript : MonoBehaviour
 {
     [SerializeField] float speed = 5;
-    [SerializeField] bool right = false;
-    Vector2 direction;
+    //[SerializeField] bool right = false, down = false, left = false;
+    //Vector2 direction;
     float timer = 0f;
 
     // Start is called before the first frame update
     void Start()
     {
-        if (right)
-        {
-            direction = Vector2.right;
-        }
-        else
-        {
-            direction = Vector2.left;
-        }
+        timer = 3;
     }
 
     // Update is called once per frame
     void Update()
     {
+        CheckTimer();
         Move();
     }
 
     void Move()
     {
-        transform.Translate(direction * speed * Time.deltaTime);
+        transform.Translate(Vector2.right * speed * Time.deltaTime,Space.Self);
+    }
+
+    void CheckTimer()
+    {
+        timer -= Time.deltaTime;
+        if(timer <= 0f)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -38,11 +41,16 @@ public class EnemyProjectileScript : MonoBehaviour
         if((col.gameObject.tag == "Player")||(col.gameObject.tag == "Boy") ||(col.gameObject.tag == "Bike") ||(col.gameObject.tag == "Wheel"))
         {
             GameManagerScript.Instance.LooseLife();
-        }else if(col.gameObject.tag == "Enemy")
+            Destroy(gameObject);
+        }
+        if(col.gameObject.tag == "Enemy")
         {
-            Destroy(col.gameObject);
+            //Do Nothing
+        }
+        else
+        {
+            Destroy(gameObject);
         }
 
-        Destroy(gameObject);
     }
 }

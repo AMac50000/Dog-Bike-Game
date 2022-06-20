@@ -7,7 +7,7 @@ public class PlayerProjectileScript : MonoBehaviour
     [SerializeField] float speed = 5;
     [SerializeField] bool left = false;
     Vector2 direction = Vector2.right;
-    float timer = 0f;
+    //float timer = 0f;
 
     private void Start()
     {
@@ -30,17 +30,12 @@ public class PlayerProjectileScript : MonoBehaviour
     {
         if(col.gameObject.tag == "Enemy")
         {
-            Destroy(col.gameObject);
+            Destroy(col.transform.parent.gameObject);
             Destroy(gameObject);
         }
         else
         {
             Destroy(gameObject);
         }
-    }
-
-    PlayerProjectileScript()
-    {
-
     }
 }

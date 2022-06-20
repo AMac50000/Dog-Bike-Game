@@ -49,11 +49,17 @@ public class PlayerMovementScript : MonoBehaviour
         Debug.DrawRay(new Vector3(rayOrigin7.position.x, rayOrigin7.position.y), Vector3.down * jumpDistance, Color.red);
         Debug.DrawRay(new Vector3(rayOrigin8.position.x, rayOrigin8.position.y), Vector3.down * jumpDistance, Color.red);
         Debug.DrawRay(new Vector3(rayOrigin9.position.x, rayOrigin9.position.y), Vector3.down * jumpDistance, Color.red);
+        //Debug.Log("Joystick X is: " + joystick.Direction);
     }
 
     void CheckInput()
     {
         xMove = joystick.Horizontal * speed;
+
+        if (!IsGrounded())
+        {
+            xMove /= 2;
+        }
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -139,6 +145,27 @@ public class PlayerMovementScript : MonoBehaviour
     public float GetStompDistance()
     {
         return stompDistance;
+    }
+
+    public int IsRightFacing()
+    {
+        if(joystick.Direction.x != 0f)
+        {
+            if (joystick.Direction.x > 0f)
+            {
+                return 1;
+            }
+            else if (joystick.Direction.x < 0f)
+            {
+                return 2;
+            }
+            else
+            {
+                return 3;
+            }
+        }
+        else return 0;
+
     }
 
     void ConstrainRotation()

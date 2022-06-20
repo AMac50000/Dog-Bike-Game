@@ -40,11 +40,17 @@ public class GameManagerScript : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         GameOverUI.SetActive(false);
         lives = startingLives;
+
+        Hearts.Add(transform.parent.Find("Heart 1").gameObject);
+        Hearts.Add(transform.parent.Find("Heart 2").gameObject);
+        Hearts.Add(transform.parent.Find("Heart 3").gameObject);
+
+        /*
         foreach (GameObject heart in GameObject.FindGameObjectsWithTag("Heart"))
         {
-
             Hearts.Add(heart);
         }
+        */
     }
 
     private void Update()

@@ -55,30 +55,34 @@
   <ItemGroup>
     <Compile Include="Assets\Asset Packs\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
     <Compile Include="Assets\Asset Packs\Joystick Pack\Scripts\Base\Joystick.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerProjectileScript.cs" />
     <Compile Include="Assets\Asset Packs\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
     <Compile Include="Assets\Asset Packs\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
     <Compile Include="Assets\Scripts\Enemy\ReverseTopScript.cs" />
+    <Compile Include="Assets\Scripts\Enemy\CloudEnemyScript.cs" />
     <Compile Include="Assets\Scripts\SludgeScript.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyProjectileScript.cs" />
     <Compile Include="Assets\Scripts\EndGateScript.cs" />
+    <Compile Include="Assets\Scripts\Enemy\ShootingEnemyScript.cs" />
     <Compile Include="Assets\Asset Packs\Joystick Pack\Examples\JoystickSetterExample.cs" />
     <Compile Include="Assets\Scripts\Enemy\DestroyOnCol.cs" />
     <Compile Include="Assets\Scripts\Manager\SceneManagerScript.cs" />
     <Compile Include="Assets\Scripts\Enemy\WalkingEnemyScript.cs" />
+    <Compile Include="Assets\Scripts\Enemy\JumpingEnemyScript.cs" />
     <Compile Include="Assets\Scripts\Enemy\ReverseEnemyScript.cs" />
     <Compile Include="Assets\Asset Packs\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
     <Compile Include="Assets\Scripts\TriggerTestScript.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyScript.cs" />
+    <Compile Include="Assets\Scripts\Pick Up\TennisBallPickUpScript.cs" />
     <Compile Include="Assets\Asset Packs\Joystick Pack\Examples\JoystickPlayerExample.cs" />
+    <Compile Include="Assets\Scripts\Manager\StatsManagerScript.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovementScript.cs" />
     <Compile Include="Assets\Scripts\UI\JumpButtonScript.cs" />
     <Compile Include="Assets\Scripts\Manager\GameManagerScript.cs" />
-    <Compile Include="Assets\Scripts\CameraScript.cs" />
-    <Compile Include="Assets\Scripts\HeartPickupScript.cs" />
-    <Compile Include="Assets\Scripts\Enemy\JumpingEnemyScript.cs" />
-    <Compile Include="Assets\Scripts\Enemy\EnemyProjectileScript.cs" />
-    <Compile Include="Assets\Scripts\Enemy\ShootingEnemyScript.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerFireScript.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerProjectileScript.cs" />
+    <Compile Include="Assets\Scripts\CameraScript.cs" />
+    <Compile Include="Assets\Scripts\Pick Up\HeartPickupScript.cs" />
+    <Compile Include="Assets\Scripts\UI\TennisBallTextScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

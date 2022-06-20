@@ -10,6 +10,7 @@ TagManager:
   - Wheel
   - Bike
   - Boy
+  - Projectile
   layers:
   - Default
   - TransparentFX
